@@ -1,0 +1,19 @@
+    <div id="video-title" class="single-video-title">
+        {{video.title}}
+    </div>
+    
+    <div id="video-url">
+        <iframe class="video-player" src="{{video.url}}"></iframe>
+    </div>
+
+    <div id="video-description" class="single-video-description">
+        {{video.description}}
+    </div>
+
+    <form id="edit-{{video._id}}" action="/videos/{{video._id}}/edit" method="get">
+      <input class="add-video-button" id="edit-button" type="submit" value="Edit"></input>
+    </form>
+<br>
+    <form id="delete-{{video._id}}" class="delete-form" action="/videos/{{video._id}}/delete" method="post">
+      <input class="add-video-button" id="delete-button" type="submit" value="Delete"></input>
+    </form>
